@@ -5,8 +5,6 @@ var increaseCharacterLimit = async () => {
 
     while (1) {
         try {
-            console.log("Searching for input character limit...");
-
             const searchBox = queryElementsInShadowRoots(document.body, '#searchbox')
             for (let i = 0; i < searchBox.length; i++) {
                 let sb = searchBox[i];
