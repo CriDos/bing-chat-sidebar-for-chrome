@@ -1,8 +1,8 @@
-# Bing Chat sidebar for Chrome
+# Copilot sidebar for Chrome
 
-[**Install from Chrome Web Store**](https://chrome.google.com/webstore/detail/bing-sidebar-for-chrome/ncjedehfkpnliaafimjhdjjeggmfmlgf)
+[**Install from Chrome Web Store**](https://chrome.google.com/webstore/detail/...)
 
-AI-powered Bing sidebar ported from Microsoft Edge to Chrome, with the same features like accessing the current webpage or PDF.
+AI-powered Bing Copilot sidebar ported from Microsoft Edge to Chrome, with the same features like accessing the current webpage or PDF.
 
 ![Screenshot](screenshot.png?raw=true)
 

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "AI Chat sidebar for Chrome",
+  "name": "Copilot sidebar for Chrome",
   "description": "Bing Chat Copilot sidebar ported from Edge to Chrome",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "icons": {
     "16": "icon.png",
     "32": "icon.png",
@@ -18,23 +18,44 @@
   "side_panel": {
     "default_path": "sidepanel/index.html"
   },
-  "host_permissions": ["<all_urls>"],
-  "permissions": ["sidePanel", "declarativeNetRequest", "tabs", "notifications"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "permissions": [
+    "sidePanel",
+    "declarativeNetRequest",
+    "tabs",
+    "notifications"
+  ],
   "content_scripts": [
     {
-      "js": ["shell/inject.js"],
-      "matches": ["https://*.bing.com/edgesvc/shell*"],
+      "js": [
+        "shell/inject.js"
+      ],
+      "matches": [
+        "https://*.bing.com/edgesvc/shell*"
+      ],
       "run_at": "document_start",
       "all_frames": true,
       "world": "MAIN"
     },
     {
-      "js": ["libs/pdf.min.js", "content-script.js"],
-      "matches": ["<all_urls>"]
+      "js": [
+        "libs/pdf.min.js",
+        "content-script.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "js": ["shell/csp_disable.js"],
-      "matches": ["https://*.bing.com/*"],
+      "js": [
+        "shell/csp_disable.js",
+        "shell/fixer.js"
+      ],
+      "matches": [
+        "https://*.bing.com/*"
+      ],
       "run_at": "document_idle",
       "all_frames": true,
       "world": "MAIN"
